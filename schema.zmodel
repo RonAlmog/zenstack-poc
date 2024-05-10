@@ -45,6 +45,8 @@ model User {
   lists List[]
   todos Todo[]
   ownedSpaces Space[] // spaces owned by the user
+
+  @@allow('read', startsWith(email, 'joey'))
 }
 
 // todo list
